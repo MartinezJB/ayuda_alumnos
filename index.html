@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- importé las fuentes "roboto" porque no las tengo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./style.css">
+    <title>Peticiones | Iniciar sesión</title>
+</head>
+<body>
+
+    <header>
+        <h1 class="texto-primario">Universidad nacional de Hurlingam</h1>
+    </header>
+
+    <form class="contenedor-primario borde-recto padding-top-5">
+        <label for="user">Usuario</label>
+        <input required class="input-text" type="text" id="user">
+        
+        <label for="password">Constraseña</label>
+        <input required class="input-text" type="password" id="password">
+        <a class="link-contraste" href="#">Tengo problemas con iniciar sesión</a>
+        <input id="ingresar" class="boton-contraste" type="submit" id="Enviar" value="Ingresar">
+    </form>
+
+    <footer>
+        <h2 class="texto-primario">UNaHur</h2>
+        <div>
+            <a class="link-primario" href="https://campus-act.unahur.edu.ar/" target="_blank">Campus</a>
+            <a class="link-primario" href="https://servicios.unahur.edu.ar/unahur3w/" target="_blank">Siu</a>
+        </div>
+    </footer>
+
+    <script src="./login.js"></script>
+
+</body>
+</html>

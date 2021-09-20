@@ -1,0 +1,231 @@
+:root {
+    --color-primario: #FFFFFF;
+    --color-secundario: 110, 173, 0; /*El color verde lo declaré en 3 numeros distintos para poder darle distinta opacidad con rgba */
+    --color-contraste: #18A0FB;
+    --color-extra: #575757;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--color-primario);
+}
+
+header {
+    position: relative;
+    top: 0;
+    background-color: rgba(var(--color-secundario), 0.5);
+    padding: 1rem;
+}
+
+footer {
+    padding-top: 0.5rem;
+    position: relative;
+    bottom: 0;
+    background-color: var(--color-extra);
+}
+
+footer h2 {
+    margin: 1rem;
+    margin-bottom: 3rem;
+}
+
+footer div {
+    border-top: 1px solid var(--color-primario);
+    display: flex;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    align-items: stretch;
+}
+
+h1, .tarjeta-nombre {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+/*link primario y contraste se refiere a los colores que usa, no a la importancia del mismo*/
+.link-contraste, .link-primario {
+    text-decoration: none;
+    margin: auto;
+}
+/* tambien puede ser una clase "color-primario" que devuelvan el color y asi poder reutilizarlo en otras clases*/
+/* pero decidi ponerlo asi para seguir con el estandar que creé de "{elemento}-{color}" */
+.link-contraste { color: var(--color-contraste); }
+.link-primario { color: var(--color-primario); }
+
+.input-text {
+    width: 300px;
+    height: 2.5rem;
+    background-color: #F2F2F2;
+    background: #F2F2F2;
+    border: 1px solid #000000;
+    margin: 0 auto 1rem auto;
+    padding: 0 0.5rem;
+    font-size: large;
+}
+
+.texto-primario {
+    color: var(--color-primario);
+    text-align: center;
+}
+
+.contenedor-primario {
+    display: flex;
+    background-color: var(--color-primario);
+    border: 1px solid var(--color-extra);
+    border-radius: 10px;
+    padding: 1rem 100px;
+    margin: 2rem auto;
+    flex-direction: column;
+    width: max-content;
+}
+
+/* clases de ayuda, quizá las elimine */
+.padding-top-5 {
+    margin: 4rem auto;
+}
+
+.contenido-centrado {
+    width: 70%;
+    text-align: center;
+}
+
+.boton-contraste, .boton-eliminar, .boton-volver{
+    background-color: var(--color-contraste);
+    margin: 1rem auto 0 auto;
+    padding: 1rem;
+    width: 80%;
+    border-style: none;
+    font-size: larger;
+}
+
+.boton-eliminar, .boton-volver, .boton-mensaje {
+    position: relative;
+    border-radius: 10px;
+    width: max-content;
+    padding: 1.5rem 5rem;
+    bottom: 1.5rem;
+}
+
+.boton-mensaje {
+    bottom: 0;
+    left: 37%;
+    padding: 1rem 4rem;
+}
+
+.boton-eliminar {
+    background-color: rgb(255, 46, 46);
+}
+
+.boton-volver {
+    background-color: var(--color-primario);
+    border: 1px solid var(--color-extra);
+}
+
+.botones-accion {
+    display: flex;
+}
+
+.boton-contraste, .boton-eliminar, .boton-volver:hover {
+    cursor: pointer;
+}
+
+.borde-recto {
+    border-radius: 0;  /* esto tengo pensado sacarlo pero estoy en duda */
+}
+
+.header-menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.logo {
+    /* aca tuve un pequeño problema porque el png que usé tenia bordes muy grandes
+    a comparacion del contenido de la imagen. entonces tuve que ponerlo así */
+    position: absolute;
+    left: -0.5rem;
+    top: -1.9rem;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row-reverse;
+    list-style: none;
+    margin-right: 5rem;
+}
+
+.listado-tarjetas {
+    width: 100%;
+    list-style: none;
+    
+}
+
+.tarjeta-cerrada, .contenedor-datos {
+    background-color: rgba(var(--color-secundario), 1);
+    border-radius: 10px;
+    margin: 1rem;
+    padding: 1rem;
+    color: var(--color-primario)
+}
+
+.contenedor-datos {
+    margin-top: 0;
+    background-color: rgba(var(--color-secundario), 0.5);
+    
+}
+
+.nro-solicitud {
+    position: absolute;
+    right: 8rem;
+}
+
+.subtitulo, .estado-solicitud {
+    align-self: flex-start;
+    margin-left: 1.5rem;
+}
+
+.estado-solicitud {
+    margin-top: -1.1rem;
+}
+
+.datos-alumno {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1rem;
+    color: var(--color-extra);
+    font-size: 1.5rem;
+    margin: 0 5rem;
+}
+
+
+.comentario {
+    background-color: rgba(var(--color-secundario), 0.75);
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 60%;
+    color: var(--color-extra);
+}
+
+.tarjeta-cerrada:hover {
+    cursor: pointer;
+}
+
+.tarjeta-nombre {
+    margin-bottom: 1rem;
+}
+
+.tarjeta-horario {
+    font-size: large;
+}
+
+.menu li {
+    color: var(--color-primario);
+    margin: 1rem;
+    font-size: 1.3rem;
+}
